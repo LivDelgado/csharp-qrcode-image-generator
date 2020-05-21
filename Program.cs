@@ -8,10 +8,11 @@ namespace QRCodeGeneratorTest
         static void Main(string[] args)
         {
             string qrtext = Console.ReadLine();
-            int modules = 10;
+            int modules = 20;
 
-            QRCodeUtil.GenerateFile_QRCoder(qrtext, modules, getFilePath());
-            QRCodeUtil.GenerateQRCode(qrtext, modules, getFilePath());
+            //QRCodeUtil.GenerateFile_QRCoder(qrtext, modules, getFilePath());
+            //QRCodeUtil.GenerateQRCode(qrtext, modules, getFilePath());
+            QRCodeUtil.GerarQRCode(qrtext, modules, getFilePath());
         }
 
         private static string getFilePath()

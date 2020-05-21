@@ -8,6 +8,8 @@
   <ItemGroup>
     <PackageReference Include="QrCode.Net" Version="0.4.0" />
     <PackageReference Include="QRCoder" Version="1.3.9" />
+    <PackageReference Include="ZXing.Net" Version="0.16.5" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.6" />
   </ItemGroup>
 
 </Project>

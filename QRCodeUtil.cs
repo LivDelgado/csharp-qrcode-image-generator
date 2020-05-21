@@ -4,6 +4,10 @@ using QRCoder;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using ZXing;
+using ZXing.Common;
+using ZXing.QrCode;
+using ZXing.Rendering;
 
 namespace QRCodeGeneratorTest
 {
@@ -32,5 +36,23 @@ namespace QRCodeGeneratorTest
                 bitmap.Save(filePath, ImageFormat.Png);
             }
         }
+
+
+        public static void GerarQRCode(string qrText, int moduleSize, string filePath)
+        {
+            var writer = new BarcodeWriter<Bitmap>()
+            {
+                Format = BarcodeFormat.QR_CODE,
+                Options = new QrCodeEncodingOptions
+                {
+                    Width = moduleSize,
+                    Height = moduleSize,
+                    Margin = System.Convert.ToInt32(moduleSize * 0.1)
+                }
+            };
+
+            var bytes = writer.Write(qrText);
+        }
+
     }
 }
