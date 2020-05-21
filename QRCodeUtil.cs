@@ -1,17 +1,33 @@
-﻿using QRCoder;
+﻿using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
+using QRCoder;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace QRCodeGeneratorTest
 {
     public static class QRCodeUtil
     {
-        public static void GenerateFile(string qrText, string fileName)
+        public static void GenerateFile_QRCoder(string qrText, int moduleSize, string filePath)
         {
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(20);
-            qrCodeImage.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+            Bitmap qrCodeImage = qrCode.GetGraphic(moduleSize);
+            qrCodeImage.Save(filePath, ImageFormat.Png);
+        }
+
+        public static void GenerateQRCode(string qrText, int moduleSize, string filePath)
+        {
+            QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.Q);
+            QrCode qrCode = qrEncoder.Encode(qrText);
+
+            GraphicsRenderer renderer = new GraphicsRenderer(new FixedModuleSize(moduleSize, QuietZoneModules.Two));
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
+            }
         }
     }
 }

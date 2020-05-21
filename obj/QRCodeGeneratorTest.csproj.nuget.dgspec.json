@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj",
         "projectName": "QRCodeGeneratorTest",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -47,6 +47,10 @@
             "QRCoder": {
               "target": "Package",
               "version": "[1.3.9, )"
+            },
+            "QrCode.Net": {
+              "target": "Package",
+              "version": "[0.4.0, )"
             }
           },
           "imports": [

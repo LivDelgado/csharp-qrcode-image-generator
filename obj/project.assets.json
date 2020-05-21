@@ -29,6 +29,15 @@
           }
         }
       },
+      "QrCode.Net/0.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Gma.QrCodeNet.Encoding.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Gma.QrCodeNet.Encoding.dll": {}
+        }
+      },
       "QRCoder/1.3.9": {
         "type": "package",
         "dependencies": {
@@ -113,6 +122,35 @@
         "version.txt"
       ]
     },
+    "QrCode.Net/0.4.0": {
+      "sha512": "/IGAS08L3o0GYsVU1VQnE23w00EVaQ1GP5cS2uEfGsiszZ2X6AnbHImwXL1XPM0opT0GOVgbX4Bhp/7eB22Ugg==",
+      "type": "package",
+      "path": "qrcode.net/0.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.exe",
+        "lib/net35/Gma.QrCodeNet.Encoding.dll",
+        "lib/net35/Gma.QrCodeNet.Encoding.pdb",
+        "lib/net35/Gma.QrCodeNet.Encoding.xml",
+        "lib/net40/Gma.QrCodeNet.Encoding.XML",
+        "lib/net40/Gma.QrCodeNet.Encoding.dll",
+        "lib/net40/Gma.QrCodeNet.Encoding.pdb",
+        "lib/net45/Gma.QrCodeNet.Encoding.dll",
+        "lib/net45/Gma.QrCodeNet.Encoding.pdb",
+        "lib/net45/Gma.QrCodeNet.Encoding.xml",
+        "lib/netcore45/Gma.QrCodeNet.Encoding.dll",
+        "lib/netcore45/Gma.QrCodeNet.Encoding.pdb",
+        "lib/netcore45/Gma.QrCodeNet.Encoding.pri",
+        "lib/netcore45/Gma.QrCodeNet.Encoding.xml",
+        "lib/netcore45/Themes/Generic.xaml",
+        "lib/sl5/Gma.QrCodeNet.Encoding.dll",
+        "lib/sl5/Gma.QrCodeNet.Encoding.pdb",
+        "lib/sl5/Gma.QrCodeNet.Encoding.xml",
+        "qrcode.net.0.4.0.nupkg.sha512",
+        "qrcode.net.nuspec"
+      ]
+    },
     "QRCoder/1.3.9": {
       "sha512": "IHbhdLATo5dr6wvoDP5vGv9kn/vHkxtyzoTzUdnMU32Ju+/mg82xirHsSvTrhlwXb5X3CrtUhBbVfgSu7brS/A==",
       "type": "package",
@@ -170,7 +208,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "QRCoder >= 1.3.9"
+      "QRCoder >= 1.3.9",
+      "QrCode.Net >= 0.4.0"
     ]
   },
   "packageFolders": {
@@ -181,11 +220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj",
       "projectName": "QRCodeGeneratorTest",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\QRCodeGeneratorTest.csproj",
+      "projectPath": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\QRCodeGeneratorTest.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\QRCodeGeneratorTest\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\source\\repos\\csharp-qrcode-image-generator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -221,6 +260,10 @@
           "QRCoder": {
             "target": "Package",
             "version": "[1.3.9, )"
+          },
+          "QrCode.Net": {
+            "target": "Package",
+            "version": "[0.4.0, )"
           }
         },
         "imports": [
@@ -241,5 +284,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'QrCode.Net 0.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "QrCode.Net",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
