@@ -24,9 +24,12 @@ namespace QRCodeGeneratorTest
             QrCode qrCode = qrEncoder.Encode(qrText);
 
             GraphicsRenderer renderer = new GraphicsRenderer(new FixedModuleSize(moduleSize, QuietZoneModules.Two));
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+
+            using (MemoryStream stream = new MemoryStream())
             {
                 renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
+                var bitmap = new Bitmap(stream);
+                bitmap.Save(filePath, ImageFormat.Png);
             }
         }
     }
